@@ -9,7 +9,7 @@ export default function CTA() {
             Not Sure Which Treatment is Right for You?
           </h2>
           <p className="text-xl text-rose-100 leading-relaxed">
-            Book a complimentary consultation with our experts. We'll assess your needs and create a personalized treatment plan to help you achieve your goals.
+            Book a complimentary consultation with our experts. We&apos;ll assess your needs and create a personalized treatment plan to help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

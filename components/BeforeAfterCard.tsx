@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { Eye } from 'lucide-react';
 
@@ -44,13 +44,13 @@ export default function BeforeAfterCard({
   
   const totalSlides = imagePairs.length;
   
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-  };
+  }, [totalSlides]);
   
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  };
+  }, [totalSlides]);
   
   // Close modal when clicking outside content
   const handleBackdropClick = (e: React.MouseEvent) => {
@@ -59,15 +59,6 @@ export default function BeforeAfterCard({
     }
   };
   
-  // Generate additional image variations by appending numbers to the base filename
-  const getImageVariations = (basePath: string) => {
-    const baseName = basePath.split('.').slice(0, -1).join('.');
-    const ext = basePath.split('.').pop();
-    return [
-      basePath, // Original image
-      `${baseName}-2.${ext}`, // Second variation
-    ];
-  };
 
   const handleViewClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -96,7 +87,7 @@ export default function BeforeAfterCard({
     
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isModalOpen]);
+  }, [isModalOpen, nextSlide, prevSlide]);
 
   return (
     <>

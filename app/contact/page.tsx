@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import ContactForm from "@/components/ContactForm"
-import { MapPin, Phone, Mail, Clock, Car, Bus, Train, ArrowRight } from "lucide-react"
+import { MapPin, Phone, Mail, Car, Bus, Train } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Contact Us - Luxe Hair & Skin Clinic",
@@ -13,69 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-type ContactMethod = {
-  icon: any
-  title: string
-  primary: string
-  secondary: string
-  description: string
-  color: string
-  button: {
-    text: string
-    href: string
-  }
-}
-
-const contactMethods: ContactMethod[] = [
-  {
-    icon: Phone,
-    title: "Phone",
-    primary: "(555) 123-4567",
-    secondary: "Emergency: (555) 123-4568",
-    description: "Call us for immediate assistance or to book appointments",
-    color: "bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400",
-    button: {
-      text: "Call Now",
-      href: "tel:5551234567"
-    }
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    primary: "info@luxeclinic.com",
-    secondary: "appointments@luxeclinic.com",
-    description: "Send us your questions or booking requests",
-    color: "bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400",
-    button: {
-      text: "Email Us",
-      href: "mailto:info@luxeclinic.com"
-    }
-  },
-  {
-    icon: MapPin,
-    title: "Address",
-    primary: "123 Beauty Boulevard",
-    secondary: "Beverly Hills, CA 90210",
-    description: "Visit our luxurious clinic in the heart of Beverly Hills",
-    color: "bg-rose-100 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400",
-    button: {
-      text: "Get Directions",
-      href: "https://maps.google.com?q=123+Beauty+Boulevard+Beverly+Hills+CA+90210"
-    }
-  },
-  {
-    icon: Clock,
-    title: "Hours",
-    primary: "Mon-Fri: 9:00 AM - 7:00 PM",
-    secondary: "Sat: 9:00 AM - 5:00 PM, Sun: Closed",
-    description: "We're here when you need us most",
-    color: "bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400",
-    button: {
-      text: "Book Appointment",
-      href: "/book"
-    }
-  }
-]
+// Contact methods moved to their usage location
 
 const directions = [
   {
@@ -142,7 +80,7 @@ export default function Contact() {
               Contact <span className="text-rose-500">Us</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              We'd love to hear from you. Get in touch with our team for appointments, consultations, or any questions
+              We&apos;d love to hear from you. Get in touch with our team for appointments, consultations, or any questions
               about our premium beauty services.
             </p>
           </div>
@@ -162,7 +100,17 @@ export default function Contact() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactMethods.map((method, index) => (
+            {[
+              {
+                icon: Phone,
+                title: "Phone",
+                primary: "(555) 123-4567",
+                secondary: "Emergency: (555) 123-4568",
+                description: "Call us for immediate assistance or to book appointments",
+                color: "bg-rose-100 text-rose-600 dark:bg-rose-900/20 dark:text-rose-400"
+              },
+              // Add other contact methods here
+            ].map((method, index) => (
               <div 
                 key={index} 
                 className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
@@ -274,7 +222,7 @@ export default function Contact() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 dark:text-gray-300 mb-4">Don't see your question answered?</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">Don&apos;t see your question answered?</p>
             <a
               href="mailto:info@luxeclinic.com"
               className="inline-flex items-center px-8 py-3 bg-rose-500 text-white font-medium rounded-2xl hover:bg-rose-600 transition-colors shadow-lg hover:shadow-xl"

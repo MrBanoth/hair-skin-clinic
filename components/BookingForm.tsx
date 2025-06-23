@@ -119,7 +119,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
         </div>
         <h3 className="text-2xl font-medium text-gray-900 dark:text-white mb-4">Booking Confirmed!</h3>
         <p className="text-gray-600 dark:text-gray-300 mb-6">
-          Thank you for your booking. We'll contact you shortly to confirm your appointment details.
+          Thank you for your booking. We&apos;ll contact you shortly to confirm your appointment details.
         </p>
         <button
           onClick={() => setShowSuccess(false)}
@@ -318,7 +318,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
       </div>
 
       <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center">
-        * Required fields. We'll contact you within 24 hours to confirm your appointment.
+        * Required fields. We&apos;ll contact you within 24 hours to confirm your appointment.
       </p>
     </form>
   )

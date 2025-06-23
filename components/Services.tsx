@@ -3,7 +3,7 @@
 import { useState, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight, Star, Clock, DollarSign } from "lucide-react"
+import { ChevronLeft, ChevronRight, Clock, DollarSign } from "lucide-react"
 import { services } from "@/data/services"
 import { homeServices } from "@/data/home"
 
@@ -25,14 +25,6 @@ export default function Services() {
     }
   }
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }).map((_, index) => (
-      <Star
-        key={index}
-        className={`w-4 h-4 ${index < Math.floor(rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
-      />
-    ))
-  }
 
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">

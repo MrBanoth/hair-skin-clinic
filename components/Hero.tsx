@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight, Play, Pause, Award } from "lucide-react"
 
 const heroSlides = [
   {
@@ -34,25 +33,13 @@ const heroSlides = [
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(true)
 
   useEffect(() => {
-    if (!isPlaying) return
-
-    const interval = setInterval(() => {
+    const intervalId = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
     }, 6000)
-
-    return () => clearInterval(interval)
-  }, [isPlaying])
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
-  }
+    return () => clearInterval(intervalId)
+  }, [])
 
   const currentSlideData = heroSlides[currentSlide]
 

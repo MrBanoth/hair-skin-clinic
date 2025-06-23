@@ -38,7 +38,7 @@ export default function Testimonials() {
             What Our <span className="text-rose-500">Clients Say</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it - hear from our satisfied clients
+            Don&apos;t just take our word for it - hear from our satisfied clients
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Testimonials() {
               <div className="flex justify-center mb-6">{renderStars(testimonials[currentIndex].rating)}</div>
 
               <blockquote className="text-xl lg:text-2xl text-gray-700 font-light italic mb-8 leading-relaxed">
-                "{testimonials[currentIndex].text}"
+                &ldquo;{testimonials[currentIndex].text}&rdquo;
               </blockquote>
 
               <div className="flex items-center justify-center space-x-4">

@@ -1,10 +1,9 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { ArrowLeft, Loader2 } from 'lucide-react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import { galleryCategories, galleryItems } from '@/data/gallery'
 import BeforeAfterCard from '@/components/BeforeAfterCard'
 
@@ -177,7 +176,7 @@ export default function GalleryPage() {
                     </svg>
                   </div>
                   <h3 className="text-base xs:text-lg font-medium text-gray-700 dark:text-gray-300">No results found</h3>
-                  <p className="text-sm xs:text-base text-gray-500 dark:text-gray-400 mt-1">We couldn't find any items in this category.</p>
+                  <p className="text-sm xs:text-base text-gray-500 dark:text-gray-400 mt-1">We couldn&apos;t find any items in this category.</p>
                   <button
                     onClick={() => handleCategoryChange('all')}
                     className="mt-3 xs:mt-4 inline-flex items-center px-3 xs:px-4 py-1.5 xs:py-2 border border-transparent text-xs xs:text-sm font-medium rounded-md shadow-sm text-white bg-rose-500 hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 transition-colors"

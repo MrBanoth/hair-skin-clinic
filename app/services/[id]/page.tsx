@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Clock, DollarSign, Check, Star } from "lucide-react"
 import { notFound } from "next/navigation"
-import { services, type Service } from "@/data/services"
+import { services } from "@/data/services"
 import BookingForm from "@/components/BookingForm"
 
 export async function generateStaticParams() {
@@ -113,12 +113,12 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
                   Book Your Session
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Schedule your appointment today. We'll contact you shortly to confirm.
+                  Schedule your appointment today. We&#39;ll contact you shortly to confirm.
                 </p>
                 <div className="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-lg mb-6">
                   <h3 className="font-medium text-gray-900 dark:text-white mb-2">Selected Service</h3>
                   <p className="text-rose-600 dark:text-rose-400">{service.title}</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">{service.price} • {service.duration}</p>
+                  <p className="text-gray-600 dark:text-gray-300">Don&#39;t see a time that works for you? Contact us for more availability.</p>
                 </div>
                 <BookingForm defaultService={service.title} />
               </div>

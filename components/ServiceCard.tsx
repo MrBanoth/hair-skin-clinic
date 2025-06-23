@@ -6,11 +6,10 @@ import { Service } from "@/data/services"
 interface ServiceCardProps {
   service: Service
   className?: string
-  hidePopularBadge?: boolean
   hideImageText?: boolean
 }
 
-export default function ServiceCard({ service, className = '', hidePopularBadge = false, hideImageText = false }: ServiceCardProps) {
+export default function ServiceCard({ service, className = '', hideImageText = false }: ServiceCardProps) {
   return (
     <div className={`flex flex-col bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group ${className}`}>
       <div className="relative h-56 overflow-hidden">

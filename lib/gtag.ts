@@ -18,17 +18,22 @@ type EventParams = {
 export const event = ({ action, category, label, value }: EventParams) => {
   if (typeof window.gtag === 'undefined') return;
   
-  window.gtag('event', action, {
+  const eventParams: Record<string, string | number> = {
     event_category: category,
     event_label: label,
-    value: value,
-  });
+  };
+  
+  if (value !== undefined) {
+    eventParams.value = value;
+  }
+  
+  window.gtag('event', action, eventParams);
 };
 
 // Extend Window interface to include gtag
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: Record<string, any>[];
+    gtag: (command: string, ...params: (string | Record<string, string | number | boolean>)[]) => void;
+    dataLayer: Array<Record<string, unknown>>;
   }
 }

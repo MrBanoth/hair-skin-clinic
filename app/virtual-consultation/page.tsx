@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
-import { Video, MessageSquare, Calendar, Clock, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+import { Video, MessageSquare, Calendar, CheckCircle } from 'lucide-react'
 
 type ConsultationType = 'video' | 'chat' | 'in-person'
 
@@ -25,14 +25,14 @@ export default function VirtualConsultation() {
           </div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Request Received!</h2>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            We've received your consultation request. Our team will contact you shortly to confirm your appointment.
+            We&apos;ve received your consultation request. Our team will contact you shortly to confirm your appointment.
           </p>
-          <a
+          <Link
             href="/"
             className="inline-flex items-center justify-center px-6 py-3 bg-rose-500 hover:bg-rose-600 text-white font-medium rounded-lg transition-colors"
           >
             Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     )

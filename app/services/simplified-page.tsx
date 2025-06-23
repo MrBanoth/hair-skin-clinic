@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { Metadata } from "next"
-import { Clock, DollarSign, Sparkles, Award, Scissors, Droplets, ChevronRight } from "lucide-react"
+import { Clock, Sparkles, Award, Scissors, Droplets, ChevronRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Services - Luxe Hair & Skin Clinic",

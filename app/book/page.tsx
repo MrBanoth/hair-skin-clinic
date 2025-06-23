@@ -22,7 +22,7 @@ export default function Book() {
             Book Your <span className="text-rose-500 font-medium">Appointment</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light">
-            Schedule your consultation or treatment with our expert team. We'll help you choose the perfect service for
+            Schedule your consultation or treatment with our expert team. We&apos;ll help you choose the perfect service for
             your needs.
           </p>
         </div>

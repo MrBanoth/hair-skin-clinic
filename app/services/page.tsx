@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { Metadata } from "next"
-import { Award, Shield, Sparkles } from "lucide-react"
+import { Shield, Sparkles } from "lucide-react"
 import { services } from "@/data/services"
 import ServiceCard from "@/components/ServiceCard"
 
