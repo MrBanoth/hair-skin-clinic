@@ -20,11 +20,11 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-400 mb-6 leading-relaxed font-sans">
               Transform your beauty with our premium hair and skin treatments. Expert care, state-of-the-art technology,
               and personalized service.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-6 font-sans">
               <a
                 href="#"
                 className="text-gray-400 hover:text-rose-500 transition-colors"
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-medium mb-6">Quick Links</h3>
+            <h3 className="text-lg font-heading font-medium text-white mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {[
                 { name: "Home", href: "/" },
@@ -61,7 +61,7 @@ export default function Footer() {
                 { name: "Book Appointment", href: "/book" },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-rose-500 transition-colors">
+                  <Link href={link.href} className="text-gray-400 hover:text-rose-500 transition-colors font-sans">
                     {link.name}
                   </Link>
                 </li>
@@ -71,7 +71,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-medium mb-6">Our Services</h3>
+            <h3 className="text-lg font-heading font-medium text-white mb-6">Our Services</h3>
             <ul className="space-y-3">
               {[
                 "HydraFacial MD",
@@ -82,7 +82,7 @@ export default function Footer() {
                 "Scalp Treatments",
               ].map((service) => (
                 <li key={service}>
-                  <Link href="/services" className="text-gray-400 hover:text-rose-500 transition-colors">
+                  <Link href="/services" className="text-gray-400 hover:text-rose-500 transition-colors font-sans">
                     {service}
                   </Link>
                 </li>
@@ -92,11 +92,11 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-medium mb-6">Contact Info</h3>
+            <h3 className="text-lg font-heading font-medium text-white mb-6">Contact Us</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-rose-500 mt-1 flex-shrink-0" />
-                <div className="text-gray-400">
+                <div className="text-gray-400 font-sans">
                   123 Beauty Boulevard
                   <br />
                   Beverly Hills, CA 90210
@@ -104,19 +104,19 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-rose-500 flex-shrink-0" />
-                <a href="tel:+15551234567" className="text-gray-400 hover:text-rose-500 transition-colors">
+                <a href="tel:+15551234567" className="text-gray-400 hover:text-rose-500 transition-colors font-sans">
                   (555) 123-4567
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-rose-500 flex-shrink-0" />
-                <a href="mailto:info@luxeclinic.com" className="text-gray-400 hover:text-rose-500 transition-colors">
+                <a href="mailto:info@luxeclinic.com" className="text-gray-400 hover:text-rose-500 transition-colors font-sans">
                   info@luxeclinic.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-rose-500 mt-1 flex-shrink-0" />
-                <div className="text-gray-400">
+                <div className="text-gray-400 font-sans">
                   Mon-Fri: 9:00 AM - 7:00 PM
                   <br />
                   Sat: 9:00 AM - 5:00 PM
@@ -131,15 +131,17 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">© 2024 Luxe Hair & Skin Clinic. All rights reserved.</p>
+            <p className="text-sm font-sans text-gray-500">
+              &copy; {new Date().getFullYear()} Luxe Hair & Skin Clinic. All rights reserved.
+            </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-400 hover:text-rose-500 text-sm transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-rose-500 text-sm transition-colors font-sans">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-rose-500 text-sm transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-rose-500 text-sm transition-colors font-sans">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-rose-500 text-sm transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-rose-500 text-sm transition-colors font-sans">
                 Cookie Policy
               </Link>
             </div>

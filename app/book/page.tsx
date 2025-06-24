@@ -18,10 +18,10 @@ export default function Book() {
       {/* Hero Section */}
       <section className="relative pt-10 pb-16 lg:pb-24 bg-gradient-to-br from-rose-50 to-pink-50 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-5xl font-playfair font-light text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl lg:text-5xl font-heading font-medium text-gray-900 dark:text-white mb-6">
             Book Your <span className="text-rose-500 font-medium">Appointment</span>
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-sans">
             Schedule your consultation or treatment with our expert team. We&apos;ll help you choose the perfect service for
             your needs.
           </p>
@@ -41,7 +41,7 @@ export default function Book() {
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-playfair font-light text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl lg:text-4xl font-heading font-medium text-gray-900 dark:text-white mb-4">
               What to <span className="text-rose-500 font-medium">Expect</span>
             </h2>
           </div>
@@ -67,11 +67,11 @@ export default function Book() {
               },
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-rose-500 text-white rounded-full flex items-center justify-center text-xl font-medium mx-auto mb-4">
+                <div className="w-16 h-16 bg-rose-500 text-white rounded-full flex items-center justify-center text-xl font-heading font-medium mx-auto mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-4">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+                <h3 className="text-xl font-heading font-medium text-gray-900 dark:text-white mb-4">{item.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 font-sans">{item.description}</p>
               </div>
             ))}
           </div>

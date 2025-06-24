@@ -34,10 +34,10 @@ export default function Testimonials() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-playfair font-light text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-heading font-medium text-gray-900 mb-6">
             What Our <span className="text-rose-500">Clients Say</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-sans">
             Don&apos;t just take our word for it - hear from our satisfied clients
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function Testimonials() {
             <div className="text-center">
               <div className="flex justify-center mb-6">{renderStars(testimonials[currentIndex].rating)}</div>
 
-              <blockquote className="text-xl lg:text-2xl text-gray-700 font-light italic mb-8 leading-relaxed">
+              <blockquote className="text-xl lg:text-2xl text-gray-700 font-sans font-light italic mb-8 leading-relaxed">
                 &ldquo;{testimonials[currentIndex].text}&rdquo;
               </blockquote>
 
@@ -61,8 +61,8 @@ export default function Testimonials() {
                   className="rounded-full object-cover"
                 />
                 <div className="text-left">
-                  <div className="font-medium text-gray-900">{testimonials[currentIndex].name}</div>
-                  <div className="text-sm text-rose-500">{testimonials[currentIndex].treatment}</div>
+                  <div className="font-heading font-medium text-gray-900">{testimonials[currentIndex].name}</div>
+                  <div className="text-sm text-rose-500 font-sans">{testimonials[currentIndex].treatment}</div>
                 </div>
               </div>
             </div>

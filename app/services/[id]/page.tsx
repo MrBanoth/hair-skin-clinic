@@ -26,7 +26,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
           <div className="flex items-center space-x-4">
             <Link
               href="/services"
-              className="inline-flex items-center text-rose-500 hover:text-rose-600 dark:text-rose-400 dark:hover:text-rose-300 transition-colors text-sm"
+              className="inline-flex items-center text-rose-500 hover:text-rose-600 dark:text-rose-400 dark:hover:text-rose-300 transition-colors text-sm font-sans"
             >
               <ArrowLeft className="w-4 h-4 mr-1.5" />
               Back to Services
@@ -34,7 +34,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
             <span className="text-gray-300 dark:text-gray-600">/</span>
             <Link 
               href="/" 
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors text-sm"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors text-sm font-sans"
             >
               Home
             </Link>
@@ -69,35 +69,35 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
             
             {/* Service Details */}
             <div className="mt-8">
-              <h1 className="text-3xl lg:text-4xl font-playfair font-light text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl lg:text-4xl font-heading font-medium text-gray-900 dark:text-white mb-6">
                 {service.title}
               </h1>
               
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center bg-gray-50 dark:bg-gray-800 px-4 py-3 rounded-xl">
                   <Clock className="w-5 h-5 text-rose-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">{service.duration}</span>
+                  <span className="text-gray-700 dark:text-gray-300 font-sans">{service.duration}</span>
                 </div>
                 <div className="flex items-center bg-gray-50 dark:bg-gray-800 px-4 py-3 rounded-xl">
                   <DollarSign className="w-5 h-5 text-rose-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">{service.price}</span>
+                  <span className="text-gray-700 dark:text-gray-300 font-sans">{service.price}</span>
                 </div>
               </div>
               
               <div className="prose dark:prose-invert max-w-none pb-8">
-                <h2 className="text-2xl font-playfair font-light text-gray-900 dark:text-white mb-4">
+                <h2 className="text-2xl font-heading font-medium text-gray-900 dark:text-white mb-4">
                   Overview
                 </h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed font-sans">
                   {service.longDescription}
                 </p>
                 
-                <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Benefits</h3>
+                <h3 className="text-xl font-heading font-medium text-gray-900 dark:text-white mb-4">Benefits</h3>
                 <ul className="space-y-3 mb-8">
                   {service.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start">
                       <Check className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600 dark:text-gray-300">{benefit}</span>
+                      <span className="text-gray-600 dark:text-gray-300 font-sans">{benefit}</span>
                     </li>
                   ))}
                 </ul>

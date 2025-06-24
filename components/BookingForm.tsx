@@ -123,7 +123,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
         </p>
         <button
           onClick={() => setShowSuccess(false)}
-          className="bg-rose-500 text-white px-6 py-2 rounded-xl hover:bg-rose-600 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+          className="bg-rose-500 text-white px-6 py-2 rounded-xl hover:bg-rose-600 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 font-heading"
         >
           Book Another Appointment
         </button>
@@ -133,7 +133,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
-      <h3 className="text-2xl font-medium text-gray-900 dark:text-white mb-6">Schedule Your Appointment</h3>
+      <h3 className="text-2xl font-heading font-medium text-gray-900 dark:text-white mb-6">Schedule Your Appointment</h3>
 
       {/* Honeypot field - hidden from users */}
       <input
@@ -149,7 +149,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
       <div className="grid md:grid-cols-2 gap-6">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="name" className="block text-sm font-heading font-medium text-gray-700 dark:text-gray-300 mb-2">
             <User className="w-4 h-4 inline mr-2" />
             Full Name *
           </label>
@@ -169,7 +169,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="email" className="block text-sm font-heading font-medium text-gray-700 dark:text-gray-300 mb-2">
             <Mail className="w-4 h-4 inline mr-2" />
             Email Address *
           </label>
@@ -189,7 +189,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
 
         {/* Phone */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="phone" className="block text-sm font-heading font-medium text-gray-700 dark:text-gray-300 mb-2">
             <Phone className="w-4 h-4 inline mr-2" />
             Phone Number *
           </label>
@@ -210,7 +210,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
         {/* Service Selection - Only show if no defaultService */}
         {showServiceSelect && (
           <div className="space-y-2">
-            <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label htmlFor="service" className="block text-sm font-heading font-medium text-gray-700 dark:text-gray-300">
               Service <span className="text-rose-500">*</span>
             </label>
             <div className="relative">
@@ -245,7 +245,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
         )}
         {/* Date */}
         <div>
-          <label htmlFor="date" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="date" className="block text-sm font-heading font-medium text-gray-700 dark:text-gray-300 mb-2">
             <Calendar className="w-4 h-4 inline mr-2" />
             Preferred Date *
           </label>
@@ -265,7 +265,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
 
         {/* Time */}
         <div>
-          <label htmlFor="time" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="time" className="block text-sm font-heading font-medium text-gray-700 dark:text-gray-300 mb-2">
             <Clock className="w-4 h-4 inline mr-2" />
             Preferred Time *
           </label>
@@ -291,7 +291,7 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
 
       {/* Notes */}
       <div className="mt-6">
-        <label htmlFor="notes" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label htmlFor="notes" className="block text-sm font-heading font-medium text-gray-700 dark:text-gray-300 mb-2">
           <MessageSquare className="w-4 h-4 inline mr-2" />
           Additional Notes
         </label>
@@ -311,13 +311,13 @@ export default function BookingForm({ defaultService = '' }: BookingFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-rose-500 text-white py-4 px-6 rounded-xl font-medium hover:bg-rose-600 focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-rose-500 text-white py-4 px-6 rounded-xl font-heading hover:bg-rose-600 focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? "Submitting..." : "Book Appointment"}
         </button>
       </div>
 
-      <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center">
+      <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 text-center font-sans">
         * Required fields. We&apos;ll contact you within 24 hours to confirm your appointment.
       </p>
     </form>

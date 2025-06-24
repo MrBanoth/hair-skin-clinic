@@ -76,11 +76,11 @@ export default function Stats() {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="text-4xl lg:text-5xl font-light mb-2">
+              <div className="text-4xl lg:text-5xl font-heading font-medium mb-2">
                 {counts[index].toLocaleString()}
                 {stat.suffix}
               </div>
-              <div className="text-rose-100 font-medium">{stat.label}</div>
+              <div className="text-rose-100 font-sans font-medium text-sm uppercase tracking-wider">{stat.label}</div>
             </div>
           ))}
         </div>

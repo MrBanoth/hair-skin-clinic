@@ -48,36 +48,34 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-10">
+            <div className="hidden md:flex items-center space-x-8">
               {navigation.map((item) => (
-                <div key={item.name} className="relative group">
-                  <Link
-                    href={item.href}
-                    className={`text-sm font-medium transition-all duration-300 hover:text-rose-500 ${
-                      pathname === item.href ? "text-rose-500" : "text-gray-700"
-                    }`}
-                  >
-                    {item.name}
-                    <span
-                      className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-500 transition-all duration-300 group-hover:w-full ${
-                        pathname === item.href ? "w-full" : ""
-                      }`}
-                    ></span>
-                  </Link>
-                </div>
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`relative px-2 py-1 text-base font-medium transition-colors duration-200 font-heading ${
+                    pathname === item.href
+                      ? "text-rose-600"
+                      : "text-gray-700 hover:text-rose-500"
+                  }`}
+                >
+                  {item.name}
+                  {pathname === item.href && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-rose-500 rounded-full" />
+                  )}
+                </Link>
               ))}
-
               {/* CTA Button */}
               <Link
                 href="/book"
-                className="bg-rose-500 text-white px-6 py-2 rounded-full hover:bg-rose-600 transition-colors font-medium"
+                className="bg-rose-500 text-white px-6 py-2 rounded-full hover:bg-rose-600 transition-colors font-medium font-heading"
               >
                 Book Appointment
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden">
+            <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-10 h-10 flex items-center justify-center transition-all duration-300 relative z-50 group"
@@ -109,7 +107,7 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsOpen(false)}
@@ -117,7 +115,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 max-w-[90vw] bg-white shadow-2xl z-50 lg:hidden flex flex-col ${
+        className={`fixed top-0 right-0 h-full w-72 max-w-[90vw] bg-white shadow-2xl z-50 md:hidden flex flex-col ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -156,10 +154,10 @@ export default function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block py-2 px-3 text-sm font-medium rounded-md transition-colors ${
+                  className={`block px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-50 font-heading ${
                     pathname === item.href
                       ? "bg-rose-50 text-rose-600"
-                      : "text-gray-700 hover:bg-gray-50 hover:text-rose-600"
+                      : "hover:text-rose-600"
                   }`}
                 >
                   {item.name}
@@ -196,7 +194,7 @@ export default function Header() {
           <Link
             href="/book"
             onClick={() => setIsOpen(false)}
-            className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2.5 px-4 rounded-full font-medium text-center block hover:from-rose-600 hover:to-pink-600 text-sm"
+            className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2.5 px-4 rounded-full font-medium text-center block hover:from-rose-600 hover:to-pink-600 text-sm font-heading"
           >
             Book Appointment
           </Link>

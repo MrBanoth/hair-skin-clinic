@@ -93,7 +93,7 @@ export default function ContactForm() {
         </p>
         <button
           onClick={() => setShowSuccess(false)}
-          className="bg-rose-500 text-white px-6 py-2 rounded-xl hover:bg-rose-600 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+          className="bg-rose-500 text-white px-6 py-2 rounded-xl hover:bg-rose-600 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 font-heading"
         >
           Send Another Message
         </button>
@@ -208,7 +208,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-rose-500 text-white py-4 px-6 rounded-xl font-medium hover:bg-rose-600 focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-rose-500 text-white py-4 px-6 rounded-xl font-heading hover:bg-rose-600 focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? "Sending..." : "Send Message"}
         </button>

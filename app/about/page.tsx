@@ -325,13 +325,13 @@ export default function About() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/book"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-rose-500 font-medium rounded-2xl hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-rose-500 font-heading font-medium rounded-2xl hover:bg-gray-100 transition-colors"
               >
                 Book Free Consultation
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-medium rounded-2xl hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-heading font-medium rounded-2xl hover:bg-white/10 transition-colors"
               >
                 Contact Us
               </a>

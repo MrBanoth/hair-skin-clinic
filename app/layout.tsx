@@ -1,21 +1,24 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Playfair_Display } from "next/font/google"
+import { Montserrat, Poppins } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Analytics from "@/components/Analytics"
+import BookingButton from "@/components/BookingButton"
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 })
 
-const playfair = Playfair_Display({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-heading",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 })
 
 const defaultTitle = "Luxe Hair & Skin Clinic - Premium Beauty Treatments";
@@ -83,12 +86,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/hospital.png' },
+      { url: '/hospital.png', sizes: '16x16', type: 'image/png' },
+      { url: '/hospital.png', sizes: '32x32', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-touch-icon.png' },
+      { url: '/hospital.png' },
     ],
     other: [
       {
@@ -138,11 +141,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable} ${poppins.variable} font-sans`}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/hospital.png" type="image/png" />
+        <link rel="icon" href="/hospital.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/hospital.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#f43f5e" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -152,7 +155,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#f43f5e" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+      <body className="min-h-screen bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-50">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:font-bold focus:underline"
@@ -165,6 +168,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <Analytics />
+        <BookingButton />
       </body>
     </html>
   )

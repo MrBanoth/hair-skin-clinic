@@ -61,10 +61,10 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-rose-50 to-pink-50 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-5xl font-playfair font-light text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl lg:text-5xl font-heading font-medium text-gray-900 dark:text-white mb-6">
             Our <span className="text-rose-500">Services</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-sans">
             Discover our comprehensive range of advanced treatments designed to enhance your natural beauty and confidence.
           </p>
         </div>
@@ -80,10 +80,10 @@ export default function Services() {
             return (
               <div key={category.name} className={`${index > 0 ? 'mt-24' : ''}`}>
                 <div className="text-center mb-12 max-w-4xl mx-auto">
-                  <h2 className="text-3xl lg:text-4xl font-playfair font-light text-gray-900 dark:text-white mb-4">
+                  <h2 className="text-3xl lg:text-4xl font-heading font-medium text-gray-900 dark:text-white mb-4">
                     {category.name}
                   </h2>
-                  <p className="text-lg text-gray-600 dark:text-gray-300">
+                  <p className="text-lg text-gray-600 dark:text-gray-300 font-sans">
                     {category.description}
                   </p>
                 </div>

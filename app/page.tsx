@@ -3,7 +3,6 @@ import Services from "@/components/Services"
 import Testimonials from "@/components/Testimonials"
 import Stats from "@/components/Stats"
 import CTA from "@/components/CTA"
-import BookingButton from "@/components/BookingButton"
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Stats />
       <Testimonials />
       <CTA />
-      <BookingButton />
     </main>
   )
 }

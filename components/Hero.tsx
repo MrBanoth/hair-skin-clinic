@@ -87,7 +87,7 @@ export default function Hero() {
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
             <div className="space-y-6 sm:space-y-8 text-white flex flex-col items-center justify-center py-8 sm:py-12">
               {/* Main Title */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair font-light leading-tight text-center">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-medium leading-tight text-center">
                 {currentSlideData.title.split(" ").map((word, index) => (
                   <span
                     key={index}
@@ -99,21 +99,21 @@ export default function Hero() {
               </h1>
 
               {/* Description */}
-              <p className="text-lg sm:text-xl lg:text-2xl font-light opacity-90 max-w-3xl leading-relaxed text-center px-2 sm:px-0">
+              <p className="text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-sans">
                 {currentSlideData.description}
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-row flex-wrap justify-center gap-3 pt-4 sm:pt-6 w-full px-4 sm:px-0">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-12">
                 <Link
                   href="/book"
-                  className="inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm sm:text-base font-medium rounded-xl sm:rounded-2xl hover:from-rose-600 hover:to-pink-600 transition-colors duration-300 w-auto min-w-[160px] flex-shrink-0"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white rounded-full text-base font-heading font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   {currentSlideData.cta}
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center px-4 sm:px-6 md:px-8 py-3 sm:py-4 border-2 border-white/30 text-white text-sm sm:text-base font-medium rounded-xl sm:rounded-2xl hover:bg-white/10 hover:border-white/50 transition-colors duration-300 w-auto min-w-[160px] flex-shrink-0"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white bg-black/30 hover:bg-white/10 rounded-full text-sm font-heading font-medium transition-all duration-300"
                 >
                   {currentSlideData.ctaSecondary}
                 </Link>

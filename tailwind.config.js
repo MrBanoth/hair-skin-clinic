@@ -8,6 +8,10 @@ module.exports = {
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['var(--font-sans)'],
+      heading: ['var(--font-heading)'],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
