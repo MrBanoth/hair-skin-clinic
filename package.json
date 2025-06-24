@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint",
-    "start": "next start"
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -63,13 +65,18 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@types/node": "^22.15.32",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.4",
-    "postcss": "^8.5",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.3"
+    "@types/node": "^20.11.25",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.1.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.0",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.10",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
   }
 }
